@@ -5,7 +5,7 @@
   >
     <v-card-text class="mt-2">
       <div class="mb-2">{{ date }}</div>
-      <p class="fs-4 text-dark">{{ story_title }}</p>
+      <p class="fs-4 text-dark">{{ story_title || "No title" }}</p>
       <p>Author: {{ author }}</p>
       <a :href="story_url" class="link-primary">{{ story_url }}</a>
     </v-card-text>
@@ -18,11 +18,11 @@
     <v-dialog v-model="dialog" max-width="500">
       <v-card>
         <v-card-title class="text-h5">
-          {{ story_title }}
+          {{ story_title || "No title" }}
         </v-card-title>
 
-        <v-card-text class="text-start">
-          {{ comment_text }}
+        <v-card-text class="text-start comments">
+          {{ comment_text || "No comments" }}
         </v-card-text>
 
         <div class="d-flex justify-content-center">
@@ -86,5 +86,8 @@ export default {
 .footer-widget {
   height: 100%;
   width: 100%;
+}
+.comments {
+  text-align: justify !important;
 }
 </style>

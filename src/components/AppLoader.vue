@@ -1,6 +1,6 @@
 <template>
   <div
-    class="d-flex flex-column justify-content-center align-items-center gap-3 h-100"
+    class="d-flex flex-column justify-content-center align-items-center gap-3"
   >
     <v-progress-circular
       :size="50"

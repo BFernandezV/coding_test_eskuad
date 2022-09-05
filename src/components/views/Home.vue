@@ -1,5 +1,5 @@
 <template>
-  <div class="h-100 mx-5 my-5 row equal">
+  <div class="mx-5 my-5 row h-100">
     <app-error v-if="error"></app-error>
     <app-loader v-else-if="loading"></app-loader>
     <v-lazy
@@ -7,12 +7,11 @@
       v-for="(article, index) in info.hits"
       :key="index"
       class="col-12 col-sm-6 col-md-3"
-      v-model="isActive"
+      v-model="article.isActive"
       :options="{
         threshold: 1,
       }"
       min-height="200"
-      transition="fade-transition"
     >
       <article-card
         v-if="article.story_url || $store.getters.getStoreView"
@@ -26,7 +25,7 @@
       ></article-card>
       <div
         v-else
-        class="h-100 d-flex align-items-center justify-content-center blur mx-auto shadow"
+        class="d-flex align-items-center justify-content-center blur mx-auto shadow h-100"
         style="max-width: 344px"
       >
         <span class="text-secondary">Article not available</span>
