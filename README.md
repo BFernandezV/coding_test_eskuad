@@ -1,5 +1,7 @@
 # coding_test
 
+Coding test for admission to the Eskuad team.
+
 ## Project setup
 ```
 npm install
@@ -19,6 +21,8 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Used libraries
+  - Vuex
+  - Vuetify
+  - Axios
+  - Vue-router
